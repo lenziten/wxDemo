@@ -1,30 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/order/order",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/header/header",
+    "pages/footer/footer"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "list":[{
-      "pagePath":"pages/home/home",
-      "text":"首页"
-    },{
-      "pagePath":"pages/order/order",
-      "text":"订单"
-    },{
-      "pagePath":"pages/info/info",
-      "text":"信息"
-    }],
-    "position":"bottom",
-    "color":"#66CCFF",
-    "backgroundColor":"#FF9900"
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "icon/1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "icon/2.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "icon/3.png",
+        "text": "信息"
+      }
+    ],
+    "position": "bottom",
+    "color": "#66CCFF",
+    "backgroundColor": "#000000"
   }
 }
