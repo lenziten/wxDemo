@@ -1,25 +1,19 @@
 <view class="main">
-<!-- 页首 -->
-<include src="../header/header"/>
-<!--  <view class="item item1" style="heigh:60px">
-    <text>logo</text>
-  </view>-->
+  <!-- 页首 -->
+  <include src="../header/header"/>
   <!-- 页面内容 -->
 
-  <view class="item item2" style="flex:1">
-    <text>{{text}}</text>
-    <view wx:for="{{menus}}" wx:for-item="menu">
-      <view  style="margin:10px;padding:10px">
-        {{menu}}
+  <view id="1" class="item item2" style="flex:1;">
+    <!--<text>{{text}}</text>-->
+    <scroll-view id="2" wx:for="{{menus}}" wx:for-item="menu">
+      <view id="3" style="margin:10px;padding:10px;width:100%;background-image: url('http://www.i-care.com.tw/images/ah-c3.gif');background-color:white;background-repeat:no-repeat;">
+          <!-- <image src='/icon/food1.jpg' mode='aspectFit' style="heigh:60px;width:60px;"></image> -->{{menu}}
       </view>
-    </view>
+    </scroll-view>
   </view>
 
-<!-- 页脚 -->
-<include src="../footer/footer"/>
-<!--  <view class="item item3" style="heigh:60px">
-    <text>footer</text>
-  </view>-->
+  <!-- 页脚 -->
+  <include src="../footer/footer"/>
 </view>
 
 

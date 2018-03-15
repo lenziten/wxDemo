@@ -10,7 +10,7 @@
 
 .item {
   height: 100rpx;
-  width: 100rpx;
+  width:100%;
 }
 
 .item1 {
