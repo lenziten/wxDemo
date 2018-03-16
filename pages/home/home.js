@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     text:"首页信息展示",
-    menus:['menu1','menu2','menu3','menu4']
+    menus: ['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6']
   },
   clkHome: function () {//首页导航按钮点击事件
     console.log("click home page");

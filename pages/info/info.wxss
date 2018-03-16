@@ -7,20 +7,26 @@
   Flex-direction : column;
   justify-content :space-between;
 }
-
 .item {
-  height: 100rpx;
+  display: flex ;
   width:100%;
 }
 
 .item1 {
   background-color: red;
+  height: 15%;
+  background-image: url('http://img6.bdstatic.com/img/image/smallpic/PPT1215.jpg');
 }
 
 .item2 {
-  background-color: dodgerblue;
+  display: flex ; 
+  flex-direction: column;
+  flex-wrap:wrap-reverse;
+  /*background-color: dodgerblue;*/
+  height: 70%;
 }
 
 .item3 {
   background-color: greenyellow;
+  height: 5%;
 }

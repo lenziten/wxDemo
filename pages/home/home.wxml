@@ -5,9 +5,10 @@
 
   <view id="1" class="item item2" style="flex:1;">
     <!--<text>{{text}}</text>-->
-    <scroll-view id="2" wx:for="{{menus}}" wx:for-item="menu">
-      <view id="3" style="margin:10px;padding:10px;width:100%;background-image: url('http://www.i-care.com.tw/images/ah-c3.gif');background-color:white;background-repeat:no-repeat;">
-          <!-- <image src='/icon/food1.jpg' mode='aspectFit' style="heigh:60px;width:60px;"></image> -->{{menu}}
+    <scroll-view id="2" wx:for="{{menus}}" wx:for-item="menu" scroll-y scroll-top="100">
+      <view id="3" class="scroll-view-item bc_green" style="margin:10px;padding:10px;width:80%;background-color:antiquewhite;background-repeat:no-repeat;">
+      <image src='http://www.i-care.com.tw/images/ah-c3.gif' mode='aspectFit' style="height:50px;width:50px;"></image>
+          {{menu}}
       </view>
     </scroll-view>
   </view>
