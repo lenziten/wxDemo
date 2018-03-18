@@ -7,22 +7,8 @@ Page({
     text:"首页信息展示",
     menus: ['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6', 'menu7', 'menu8', 'menu9'],
     toView: 'red',
-    scrollTop: 1
-  },
-  clkHome: function () {//首页导航按钮点击事件
-    console.log("click home page");
-    infoPage = "home";
-    var objs = wx.createSelectorQuery().in(this);
-    var obj = objs.select('#listHome'); debugger
-    wx.request({
-      url: 'http://1610b5834a.iok.la:28506/exit/test',
-      header:{
-        'content-type':'application/json'
-      },
-      success:function(res){
-        console.log(res);
-      }
-    })
+    scrollTop: 1,
+    count: [],
   },
   editData:function(data_){
     this.setData({ menus: data_});
@@ -57,6 +43,9 @@ Page({
 
   },
   onUnload:function(){//页面关闭
+
+  },
+  clkMinute:function(options){
 
   }
 })

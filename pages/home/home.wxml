@@ -3,12 +3,16 @@
   <include src="../header/header"/>
   <!-- 页面内容 -->
 
-  <view id="1" class="item item2 " style="flex:1;">
+  <view class="item item2 " style="flex:1;">
     <scroll-view style="height: 100%;"   scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-      <view id="2" class="scroll-view-item bc_green" wx:for="{{menus}}" wx:for-item="menu">
-        <view id="3" style="margin:10px;padding:10px;width:80%;background-color:antiquewhite;background-repeat:no-repeat;">
+      <view class="scroll-view-item bc_green" wx:for="{{menus}}" wx:for-item="menu">
+        <view style="margin:10px;padding:10px;width:90%;background-color:antiquewhite;background-repeat:no-repeat;">
           <image src='http://www.i-care.com.tw/images/ah-c3.gif' mode='aspectFit' style="height:50px;width:50px;"></image>
             {{menu}}
+            <!--选择数量-->
+            <view style='position:relative;float:right;right:10px;top:30px;'>
+              <text width="10px">-</text>\t<text>0</text>\t<text>+</text>
+            </view>
         </view>
       </view>
     </scroll-view>
