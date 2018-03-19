@@ -5,13 +5,13 @@
 
   <view class="item item2 " style="flex:1;">
     <scroll-view style="height: 100%;"   scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-      <view class="scroll-view-item bc_green" wx:for="{{menus}}" wx:for-item="menu">
+      <view class="scroll-view-item bc_green" wx:for="{{menus}}" wx:for-item="menu" wx:for-index="index">
         <view style="margin:10px;padding:10px;width:90%;background-color:antiquewhite;background-repeat:no-repeat;">
           <image src='http://www.i-care.com.tw/images/ah-c3.gif' mode='aspectFit' style="height:50px;width:50px;"></image>
-            {{menu}}
+            {{menu.name}}\tprice:\t{{menu.price}}\t元
             <!--选择数量-->
             <view style='position:relative;float:right;right:10px;top:30px;'>
-              <text width="10px">-</text>\t<text>0</text>\t<text>+</text>
+              <text width="10px" bindtap='clkMinute' data-index="{{index}}">-</text>\t<text>{{menu.count}}</text>\t<text bindtap='clkPlus' data-index="{{index}}">+</text>
             </view>
         </view>
       </view>

@@ -1,3 +1,3 @@
   <view class="item item3" style="heigh:10px">
-    <text>footer</text>
+    <text>已选总价: {{totalPrice}} 元</text>
   </view>
