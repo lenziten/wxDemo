@@ -5,10 +5,12 @@ const app = getApp()
 Page({
   data: {
     text:"首页信息展示",
-    menus: [{ name: 'menu1', price: 1.10, count: 0 }, { name: 'menu2', price: 2.30, count: 0 }, { name: 'menu3', price: 3.00, count: 0 }, { name: 'menu4', price: 4.40, count: 0 }, { name: 'menu5', price: 5.00, count: 0 }, { name: 'menu6', price: 6.66, count: 0 }, { name: 'menu7', price: 7.00, count: 0 }, { name: 'menu8', price: 8.56, count: 0 }, { name: 'menu9', price: 9.00, count: 0 }],
+    menus: [{ name: 'menu1', price: 1, count: 0 }, { name: 'menu2', price: 2, count: 0 }, { name: 'menu3', price: 3, count: 0 }, { name: 'menu4', price: 4, count: 0 }, { name: 'menu5', price: 5, count: 0 }, { name: 'menu6', price: 6, count: 0 }, { name: 'menu7', price: 7, count: 0 }, { name: 'menu8', price: 8, count: 0 }, { name: 'menu9', price: 9, count: 0 }],
     toView: 'red',
     scrollTop: 1,
-    totalPrice: 0
+    totalPrice: 0,
+    purchType:1,//1:下单;2:付款
+    showTotalPrice : true //是否显示总价?true是false否
   },
   editData:function(data_){
     this.setData({ menus: data_});
@@ -46,27 +48,27 @@ Page({
 
   },
   clkMinute: function (event) {
-    var index = event.currentTarget.dataset.index;
+    var index = event.currentTarget.dataset.index;//获取当前菜品下标
     var menus_ = this.data.menus;
     if (null == menus_[index].count || menus_[index].count == 0) {
       return;
     }
-    menus_[index].count--;
-    var totalPrice_ = this.data.totalPrice;
-    totalPrice_ = totalPrice_ - menus_[index].price;
-    this.setData({ menus: menus_, totalPrice: totalPrice_ });
+    menus_[index].count--;//当前菜品数量-1
+    this.setData({ 
+      menus: menus_, 
+      totalPrice: this.data.totalPrice - menus_[index].price //当前总价 = 总价 - 菜品单价
+      });
   },
   clkPlus: function (event) {
-    var index = event.currentTarget.dataset.index;
+    var index = event.currentTarget.dataset.index;//获取当前菜品下标
     var menus_ = this.data.menus;
     if (null == menus_[index].count) {
       return;
     }
-    menus_[index].count++;
-    var totalPrice_ = this.data.totalPrice;
-    console.log(totalPrice_ + " + " + menus_[index].price);
-    totalPrice_ = totalPrice_ + menus_[index].price;
-    console.log("= " + totalPrice_);
-    this.setData({ menus: menus_, totalPrice: totalPrice_ });
+    menus_[index].count++;//当前菜品数量+1
+    this.setData({ 
+      menus: menus_, 
+      totalPrice: this.data.totalPrice + menus_[index].price //当前总价 = 总价 + 菜品单价
+      });
   }
 })

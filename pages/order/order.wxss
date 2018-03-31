@@ -1,21 +1,35 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
+.main {
+  position : fixed;
+  height : 100%;
+  width : 100%;
+  background-color: antiquewhite;
+  display: flex ;
+  Flex-direction : column;
+  align-items : stretch;
+  justify-content :space-between;
+}
+
+.item {
+  display: flex ;
+  width:100%;
+}
+
+.item1 {
+  background-color: red;
+  height: 15%;
+  background-image: url('http://img6.bdstatic.com/img/image/smallpic/PPT1215.jpg');
+}
+
+.item2 {
+  display: flex ; 
   flex-direction: column;
-  align-items: center;
+  flex-wrap:wrap-reverse;
+  background-color: dodgerblue;
+  height: 70%;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.item3 {
+  background-color: greenyellow;
+  height: 5%;
 }

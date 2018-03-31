@@ -1,3 +1,5 @@
   <view class="item item3" style="heigh:10px">
-    <text>已选总价: {{totalPrice}} 元</text>
+    <text style="position:absolute;left:20px;" wx-if="{{showTotalPrice == true}}">已选总价: {{totalPrice}} 元</text>
+    <text style="position:absolute;right:20px;" wx-if="{{purchType == 1}}">下单</text>
+    <text style="position:absolute;right:20px;" wx-if="{{purchType == 2}}" bindtap='onPay'>付款</text>
   </view>
